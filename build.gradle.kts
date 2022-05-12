@@ -38,6 +38,7 @@ subprojects {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
         implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationJsonVersion")
         implementation("org.springframework.boot:spring-boot-starter-web:2.6.4")
+        implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.2")
     }
 }
 
