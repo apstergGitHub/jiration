@@ -24,10 +24,13 @@ subprojects {
     apply<JavaLibraryPlugin>()
 
     repositories {
-        mavenCentral()
         maven {
             url = uri("https://packages.atlassian.com/maven-external/")
         }
+        maven {
+            url = uri("https://maven.atlassian.com/content/repositories/atlassian-public/")
+        }
+        mavenCentral()
     }
 
     val kotlinVersion: String by project
@@ -39,6 +42,18 @@ subprojects {
         implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationJsonVersion")
         implementation("org.springframework.boot:spring-boot-starter-web:2.6.4")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.2")
+//        implementation("com.atlassian.jira:jira-api:8.22.2") {
+//            exclude("com.octo.captcha")
+//            exclude("jndi")
+//            exclude("jta")
+//        }
+//        implementation("com.atlassian.jira:jira-core:8.22.2") {
+//            exclude("com.octo.captcha")
+//            exclude("jndi")
+//            exclude("jta")
+//        }
+//        implementation("org.hamcrest:hamcrest:2.2")
+        implementation("com.atlassian.jira:jira-rest-java-client-core:5.2.4")
     }
 }
 
