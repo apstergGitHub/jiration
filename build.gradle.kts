@@ -54,6 +54,7 @@ subprojects {
 //        }
 //        implementation("org.hamcrest:hamcrest:2.2")
         implementation("com.atlassian.jira:jira-rest-java-client-core:5.2.4")
+        compileOnly("io.atlassian.fugue:fugue:5.0.0")
     }
 }
 
